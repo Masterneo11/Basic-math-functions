@@ -1,35 +1,62 @@
       
 
 
-def num_guesser(a, target):
+def num_guesser(a):
  
  
     left = 0
-    right = len(a) -1
- 
+    right = len(a) 
+    
     while left <= right:
  
         mid = (left + right) // 2
-        if a[mid] == target:
-            return mid
-        elif a[mid] < target :
-                
-        else:
-            right = mid - 1
-    return -1 
+        correct = input(f" is {mid} correct  yes or no: ")
+        print()
+        
+        if correct == "yes":
+            print()
+            return mid 
+        
+        higher_lower = input( " do i go higher or lower : ")
+       
+        
+        if higher_lower  == "higher":
+            left = mid - 1 
+            print()
+        
+        elif higher_lower == "lower":
+            right = mid + 1
+            print()
 
-# somehow i have to give the option of going higher or lower to the computer 
-# im guessing for conditionals maybe 
-
-a = [ i for i in range(100)]
-target = int(input(" enter a number 1-100 : "))
-print(num_guesser(a,target))
  
 
 
 
-too_high = print(" that was too high ")
-too_low = print(" that was too low ")
 
+a = [ i for i in range(100)]
 
-acquired_guess = is  
+print()
+print()
+print(" Welcome to the number guesser! Pick a number in your mind and I'll try to guess it!")
+print()
+print(" Are you ready :  ( yes or no : ) " )
+
+print()
+
+decision = input(" yes or no : ")
+
+if decision == "yes":
+    print(" Great! ")
+    print()
+    num_guesser(a)
+
+elif decision == "no":
+    no = print("okay well give you some time just type  ' yes '  when you are ready")
+    yess = input()
+    if yess == "yes":
+        print()
+        print(" Great ! ")
+        print()
+        num_guesser(a)
+
+ 
