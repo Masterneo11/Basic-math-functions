@@ -1,16 +1,16 @@
 
 
 def add(x,y) -> float:
-    return x + y
+    return float(x + y)
 
 def multiply(x, y) -> float:
-    return x * y
+    return float(x * y)
 
 def square(x) -> float:
-    return x * x
+    return float(x * x)
 
 def add_squares(x, y) -> float:
-    return x * x + y * y
+    return float(x * x + y * y)
 
 
 
