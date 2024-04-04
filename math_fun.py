@@ -7,10 +7,10 @@ def multiply(x, y) -> float:
     return float(x * y)
 
 def square(x) -> float:
-    return float(x * x)
+    return float(multiply(x,x))
 
 def add_squares(x, y) -> float:
-    return float(x * x + y * y)
+    return float(add(square(x) ,square(y)))
 
 
 
